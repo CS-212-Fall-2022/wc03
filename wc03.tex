@@ -17,7 +17,7 @@
 \printanswers
 
 \title{Weekly Challenge 03: Checking Regularity}
-\author{ungraded} % <=== replace with your student ID, e.g. xy012345
+\author{mj06878} % <=== replace with your student ID, e.g. xy012345
 \date{CS 212 Nature of Computation\\Habib University\\Fall 2022}
 
 \qformat{{\large\bf \thequestion. \thequestiontitle}\hfill}
@@ -36,7 +36,19 @@
   \]
   
   \begin{solution}
-    % Enter your solution here.
+    % Enter your solution here.\\ \\
+    \\ 
+    Lets choose a String \(S\) which \(\in\) \(w\). If we want to proof that an infinite language is regular or not then we can use Pumping lemma as a negative test to disprove that the given language is not regular. If a language passes the pumping lemma test then this is not decidable that a language is regular but if it fails the test than we can say that a Language is irregular. So, \\ 
+    \[S = 0^{p} 1^{p} 0^{p} \ 0^{p} 1^{p} 0^{p} \]
+    Now we are decomposing \(S\) into \(xyz\): \\ 
+    \[xyz = 0^{p-k} \ 0^{k} \ 1^{p} 0^{p} \ 0^{p} \ 1^{p} \ 0^{p}, \, 1<=k<= p\]
+    Now we deduce something about \(y\):
+    \[y=0^{k}, \, 1<= k<=p  \]
+    At the last we will pump the value of \(y\), lets say we pump for the 2 times then, 
+    \[xy^{2}z =0^{p+k} \, 1^{p} \, 0^{p} \, 0^{p} \, 1^{p} \, 0^{p} \, \notin L\]
+    So, we can say that when we pump the value of \(y\) for the \(i\) times which in this case is 2 then the resultant \(w\) \(\notin\) Language \(L\). Hence the Language is not-regular.
+    
+    
   \end{solution}
 \end{questions}
 \end{document}
