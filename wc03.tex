@@ -36,7 +36,21 @@
   \]
   
   \begin{solution}
-    % Enter your solution here.
+    \textbf{To check whether the Language is Regular or not, I will use Pumping lemma.}
+    \\ \textbf{Pumping Lemma:}
+    \\ Let W = $1^n$
+    \\ We know that $|xy| < n$ so y will contain all the strings of 's
+    \\ Thus in this case it would be \{ w^iw^j\} = $(1^n)^i$ $(1^n)^j$
+    \\ From the question we can determine that i can be less than or equal to j so taking i = 1 and j =2
+    
+    \\ Pumping up for 2 times =  $(1^n)^(i+2)$ $(1^n)^j$
+    \\ This would end up as 11111
+    \\ \textbf{We dont know the mid point so we can determine what is first part of w which is with i and what is second part of w which is with j }
+    
+    \\ we observe that pumping or pumping down will only cause change in the first part of string, keeping the other one unchanged
+    \\ we can say that the resulted string is same and and following all the rules so the language is regular
+    
+    \\ \textbf{And we know that if resulting string on language is String is regular then the language itself is also regular}
   \end{solution}
 \end{questions}
 \end{document}
